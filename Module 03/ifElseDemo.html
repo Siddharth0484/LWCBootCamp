@@ -1,0 +1,21 @@
+<template>
+    <template if:true={show}>
+        <lightning-card title="MiscStaticResource" icon-name="custom:custom19">
+            <div class="slds-align_absolute-center">
+                <img src= {tomLogo}>
+               <lightning-button variant="brand"  label="Show Jerry" onclick={showTomHandler} ></lightning-button>
+            </div>
+           
+        </lightning-card>
+    </template>
+    <template if:false={show}>
+        <lightning-card title="MiscStaticResource" icon-name="custom:custom19">
+            <div class="slds-align_absolute-center">
+               <img src={jerryLogo}> 
+               <lightning-button variant="brand" label="Show Tom" onclick={showJerryHandler} var></lightning-button>
+            </div>
+            
+        </lightning-card>
+    </template>
+</template>
+

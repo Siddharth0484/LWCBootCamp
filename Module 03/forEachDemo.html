@@ -1,0 +1,28 @@
+<template>
+ 
+ <lightning-card title="ForEach:Demo" icon-name="custom:custom63">
+ <div style="height: 300px;">
+    <lightning-datatable
+            key-field="id"
+            data={Contacts}
+            columns={columns}>
+        </lightning-datatable>
+    </div>  
+</lightning-card>
+
+
+<lightning-card title="Iterator Demo" icon-name="custom:custom14">
+    <ul class="slds-m-around_medium">
+        <template iterator:it={Contacts}>
+            <li key={it.value.Id}>
+                <div if:true={it.first} class="firstIndex"></div>
+                {it.value.Name}, {it.value.Email}
+                <div if:true={it.last} class="lastIndex"></div>
+            </li>
+        </template>
+    </ul>
+</lightning-card>
+
+   
+    
+</template>
