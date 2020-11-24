@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Full Calculator" icon-name="custom:custom63">
+        Calc Expression : {input}
+    </br>
+        Result : {result}
+    </br></br>
+
+<lightning-button variant="Neutral"  class = "slds-p-right_large" label="1"  value="1" onclick={onClick}></lightning-button>
+   <lightning-button variant="Neutral" class = "slds-p-right_large" label="2"  value="2" onclick={onClick}></lightning-button>
+    <lightning-button variant="Neutral"  class = "slds-p-right_large" label="3" value="3" onclick={onClick}></lightning-button>
+   <lightning-button variant="Brand" class = "slds-p-right_large" label="+" value="+" onclick={onClick} ></lightning-button>
+   </br></br>
+    <lightning-button variant="Neutral"  class = "slds-p-right_large" label="4" onclick={onClick}></lightning-button>
+   <lightning-button variant="Neutral" class = "slds-p-right_large" label="5" onclick={onClick}></lightning-button>
+    <lightning-button variant="Neutral"  class = "slds-p-right_large" label="6" onclick={onClick} ></lightning-button>
+   <lightning-button variant="Brand" class = "slds-p-right_large" label="-" onclick={onClick}  ></lightning-button>
+     </br></br> 
+    <lightning-button variant="Neutral"  class = "slds-p-right_large" label="7" onclick={onClick}  ></lightning-button>
+   <lightning-button variant="Neutral" class = "slds-p-right_large" label="8" onclick={onClick} ></lightning-button>
+    <lightning-button variant="Neutral"  class = "slds-p-right_large" label="9" onclick={onClick}  ></lightning-button>
+   <lightning-button variant="Brand" class = "slds-p-right_large" label="*"  onclick={onClick} ></lightning-button>
+   </br></br>
+    <lightning-button variant="Neutral"  class = "slds-p-right_large" label="CLR" onclick={onClickClear}  ></lightning-button>
+   <lightning-button variant="Neutral" class = "slds-p-right_large" label="0" onclick={onClick} ></lightning-button>
+    <lightning-button variant="Success"  class = "slds-p-right_large" label="=" onclick={onClick} ></lightning-button>
+   <lightning-button variant="Brand" class = "slds-p-right_large" label="/" onclick={onClick}  ></lightning-button>
+    </lightning-card >
+    </template>
