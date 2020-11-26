@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="ParentDisplay" icon-name="standard:contact_list">
+          <div onnotifyevent = {handleChildEvent}>
+            <div class="slds-grid slds-wrap slds-var-m-around_medium">
+               
+                <template for:each={childs} for:item="child">
+                    <div class="slds-box slds-box_small" key={child.key}>
+                        <p>{child.childTitle}: {child.status}ed  </p>
+                        <c-child child-title={child.childTitle} ></c-child>
+                    </div>
+                </template>
+            </div> 
+        </div>
+    </lightning-card>
+</template>
