@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title=" Opportunity Quick Create " >
+    <template if:true={showData}>
+
+      <lightning-record-form
+            object-api-name={objectApiName}
+            fields={detailFields}
+            onsuccess={handleSuccess}>
+    </lightning-record-form>
+      
+    </template>
+    <template if:false={showData}>
+    <lightning-record-form
+            object-api-name={objectApiName}
+            fields={detailFields}
+            onsuccess={handleSuccess}>
+    </lightning-record-form>
+      
+    </template>
+</lightning-card>
+</template>
+
