@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Lookup" icon-name="standard:account">
+        <div class="slds-m-around_medium slds-box_small">
+            <div>
+                <lightning-input type="search" onchange={handleChange} class="slds-m-bottom_small"
+                     value={searchKey}></lightning-input>
+                <lightning-button class="slds-p-top_small" label="Reset All" onclick={resetSearch} variant="brand">
+                </lightning-button>
+            </div>
+            <template if:true={accounts}>
+                <template for:each={accounts.data} for:item="account">
+                    <p key={account.Id} data-label={account.Id} data-name={account.Name} class="dropDownStyle"
+                        onclick={getContactForAccounts}>
+                        {account.Name}</p>
+                </template>
+            </template>
+            
+        </div>
+        <div class="slds-m-around_medium">
+
+            <template if:true={contacts}>
+                <p class="slds-m-bottom_small">
+                    Related Contacts : {selectedAccount}
+                </p>
+                <lightning-datatable key-field="id" data={contacts}  columns={columns}>
+                </lightning-datatable>
+            </template>
+            
+        </div>
+    </lightning-card>
+</template>
